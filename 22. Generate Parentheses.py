@@ -23,5 +23,5 @@ class Solution:
             ans=tem.copy()
         return ans
 o=Solution()
-print(o.generateParenthesis(3))
+print(len(o.generateParenthesis(5)))
 
