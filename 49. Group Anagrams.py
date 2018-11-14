@@ -6,13 +6,16 @@ class Solution:
         :rtype: List[List[str]]
         """
         ans=[]
-        dic=[]
+        dic={}
         for i in strs:
-            if sorted(i) not in dic:
-                dic.append(sorted(i))
-                ans.append([i])
+            s=''.join(sorted(i))
+            if s not in dic:
+                dic[s]=[i]
+
             else:
-                ans[dic.index(sorted(i))].append(i)
+                dic[s].append(i)
+        for i in dic.values():
+            ans.append(i)
         return ans
 o=Solution()
 print(o.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
