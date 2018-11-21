@@ -27,7 +27,7 @@ class Solution:
         return ans
 
 
-a=[]
+a=[[[1,3],[6,9]]]
 test=[]
 for i in a:
     tem=Interval()
